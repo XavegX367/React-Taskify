@@ -60,7 +60,7 @@ const SingleTodo = ({index,todo,todos,setTodos}: Props) => {
                 todo.isDone? (
                   <s className="todos_single--text">{todo.todo}</s>
                 ): (
-                  <span className="todos_single--text">{todo.todo}</span>
+                  <span className="todos_single--text" onClick={() => { if(!edit && !todo.isDone) {setEdit(!edit)}}}>{todo.todo}</span>
                 )
               )
             }
